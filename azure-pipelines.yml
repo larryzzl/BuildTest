@@ -19,6 +19,10 @@ steps:
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, 11, 12, default, specifyPath
 
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.app'
+    targetFolder: '$(build.artifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
