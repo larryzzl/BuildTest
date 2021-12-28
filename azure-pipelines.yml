@@ -18,12 +18,7 @@ steps:
     configuration: 'Debug'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, 11, 12, default, specifyPath
-    exportPath: '$(build.artifactStagingDirectory)
-
-- task: CopyFiles@2
-  inputs:
-    contents: '**/*.app'
-    targetFolder: '$(build.artifactStagingDirectory)'
+    exportPath: '$(build.artifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
